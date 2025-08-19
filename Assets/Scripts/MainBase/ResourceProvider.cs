@@ -15,6 +15,20 @@ public class ResourceProvider : MonoBehaviour
             _availableResources.Add(resource);
     }
 
+    public void ClearResources()
+    {
+        _availableResources.Clear();
+    }
+
+    public void UnregisterResource(Resource resource)
+    {
+        if (resource == null)
+            return;
+
+        _availableResources.Remove(resource);
+        _assignedResources.Remove(resource);
+    }
+
     public bool TryAssignResource(out Resource resource)
     {
         resource = null;
@@ -34,7 +48,6 @@ public class ResourceProvider : MonoBehaviour
                 resource = current;
                 _availableResources.RemoveAt(i);
                 _assignedResources.Add(resource);
-
                 return true;
             }
         }
@@ -48,7 +61,6 @@ public class ResourceProvider : MonoBehaviour
             return;
 
         _assignedResources.Remove(resource);
-        RegisterResource(resource);
     }
 
     public void RemoveResource(Resource resource)

@@ -11,6 +11,11 @@ public class ResourceSpawner : MonoBehaviour
     private Coroutine _spawningCoroutine;
     private bool _isSpawningActive;
 
+    private void Start()
+    {
+        StartSpawning();
+    }
+
     public void StartSpawning()
     {
         if (_spawningCoroutine != null)

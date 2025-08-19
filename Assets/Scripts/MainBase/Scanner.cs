@@ -6,9 +6,18 @@ public class Scanner : MonoBehaviour
     [SerializeField] private LayerMask _resourceLayer;
 
     private Collider[] _collidersBuffer = new Collider[20];
+    private ResourceProvider _resourceProvider;
 
-    public void Scan(ResourceProvider provider)
+    private void Start()
     {
+        _resourceProvider = GetComponent<ResourceProvider>();
+    }
+
+    public void Scan()
+    {
+        if (_resourceProvider == null)
+            return;
+
         int count = Physics.OverlapBoxNonAlloc(
             transform.position,
             _scanAreaSize / 2f,
@@ -17,10 +26,12 @@ public class Scanner : MonoBehaviour
             _resourceLayer
         );
 
+        _resourceProvider.ClearResources();
+
         for (int i = 0; i < count; i++)
         {
             if (_collidersBuffer[i].TryGetComponent<Resource>(out Resource resource))
-                provider.RegisterResource(resource);
+                _resourceProvider.RegisterResource(resource);
         }
     }
 

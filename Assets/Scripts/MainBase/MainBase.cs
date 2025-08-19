@@ -6,7 +6,6 @@ using System.Collections.Generic;
 public class MainBase : MonoBehaviour
 {
     [Header("Settings")]
-    [SerializeField] private ResourceSpawner _resourceSpawner;
     [SerializeField] private UnitSpawner _unitSpawner;
     [SerializeField] private int _initialUnitsCount = 1;
     [SerializeField] private ResourceCounterDisplay _resourceCounterDisplay;
@@ -32,7 +31,6 @@ public class MainBase : MonoBehaviour
             _unitAutoSpawner.OnUnitSpawned += AddNewBot;
 
         _resourceCounterDisplay.UpdateCounter(0);
-        _resourceSpawner.StartSpawning();
         SpawnInitialUnits();
         StartCoroutine(ScanningRoutine());
     }
@@ -53,7 +51,7 @@ public class MainBase : MonoBehaviour
 
         while (enabled)
         {
-            _scanner.Scan(_resourceProvider);
+            _scanner.Scan();
             AssignResourcesToFreeBots();
             yield return wait;
         }
@@ -70,7 +68,6 @@ public class MainBase : MonoBehaviour
             _storage.AddResource();
             _resourceProvider.RemoveResource(resource);
 
-            // Обновляем счетчик сразу после добавления ресурса
             _resourceCounterDisplay.UpdateCounter(_storage.GetCurrentResources());
         }
 
