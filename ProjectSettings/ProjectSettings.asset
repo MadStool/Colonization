@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: 31ad08582ec39a64ebf46595137ae613
+  productGUID: 48327e36381d1bd4e9dd56b8c90d2ecc
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: "\u0411\u043E\u0442\u044B\u0421\u0431\u043E\u0440\u0449\u0438\u043A\u0438"
+  productName: "\u041A\u043E\u043B\u043E\u043D\u0438\u0437\u0430\u0446\u0438\u044F"
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -677,14 +677,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: "\u0411\u043E\u0442\u044B\u0421\u0431\u043E\u0440\u0449\u0438\u043A\u0438"
+  metroPackageName: "\u041A\u043E\u043B\u043E\u043D\u0438\u0437\u0430\u0446\u0438\u044F"
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: "\u0411\u043E\u0442\u044B\u0421\u0431\u043E\u0440\u0449\u0438\u043A\u0438"
+  metroApplicationDescription: "\u041A\u043E\u043B\u043E\u043D\u0438\u0437\u0430\u0446\u0438\u044F"
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -754,10 +754,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: fee68a51-d783-4fd2-a6c2-fdcca2bef7ca
+  cloudProjectId: dbe8d2f6-9f84-4844-a76c-11049fdb7a3c
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: "\u0411\u043E\u0442\u044B\u0421\u0431\u043E\u0440\u0449\u0438\u043A\u0438"
+  projectName: "\u041A\u043E\u043B\u043E\u043D\u0438\u0437\u0430\u0446\u0438\u044F"
   organizationId: teranozavraks
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
